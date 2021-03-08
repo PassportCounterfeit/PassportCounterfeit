@@ -1,7 +1,7 @@
 #include "BRA.h"
 #include "utils.h"
 
-bool BRA_P4(const string& uvPath) {
+bool BRA_P4(const string& uvPath, const string& wiPath, const string& irPath) {
 	Mat uvBRA = imread(uvPath);
 	int width = uvBRA.cols;
 	int height = uvBRA.rows;

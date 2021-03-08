@@ -1,7 +1,7 @@
 #include "IND.h"
 #include "utils.h"
 
-bool IND_P3(const string& uvPath) {
+bool IND_P3(const string& uvPath, const string& wiPath, const string& irPath) {
 	Mat uvJPN = imread(uvPath);
 	int width = uvJPN.cols;
 	int height = uvJPN.rows;

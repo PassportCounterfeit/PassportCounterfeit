@@ -1,6 +1,6 @@
 #include "ESP.h"
 
-bool ESP_P3(const string& uvPath) {
+bool ESP_P3(const string& uvPath, const string& wiPath, const string& irPath) {
 	Mat uvESP = imread(uvPath);
 	int width = uvESP.cols;
 	int height = uvESP.rows;
