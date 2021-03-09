@@ -1,5 +1,5 @@
 #include "JPN.h"
-
+#include "utils.h"
 
 bool JPN_P3(const string& uvPath,const string& wiPath,const string& irPath) {
 	Mat uvJPN = imread(uvPath);
@@ -32,8 +32,8 @@ bool JPN_P3(const string& uvPath,const string& wiPath,const string& irPath) {
 	//方式二：取灰度图滤波后对比白光图的头像进行模板匹配(效果非常不好)
 	//Mat uvGray;
 	//cvtColor(checkAreaUV,uvGray, COLOR_BGR2GRAY);
-	//medianBlur(uvGray, uvGray, 3);
-	//GaussianBlur(uvGray, uvGray, Size(5, 5), 0, 0);
+	///*medianBlur(uvGray, uvGray, 3);
+	//GaussianBlur(uvGray, uvGray, Size(5, 5), 0, 0);*/
 
 	//vector<Mat> channels;
 	//split(checkAreaUV, channels);
@@ -49,6 +49,7 @@ bool JPN_P3(const string& uvPath,const string& wiPath,const string& irPath) {
 	//imshow("wiGray", wiGray);
 	//waitKey();
 
+	//cout << perceptualHash(uvGray, wiGray) << endl;
 	//Mat matchResult;
 	//matchTemplate(wiGray, uvG, matchResult, TM_CCORR_NORMED);
 	//double minVal, maxVal;

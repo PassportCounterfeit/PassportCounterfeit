@@ -157,6 +157,7 @@
     <ClCompile Include="JPN.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MEX.cpp" />
+    <ClCompile Include="TUR.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +167,7 @@
     <ClInclude Include="JPN.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="MEX.h" />
+    <ClInclude Include="TUR.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
