@@ -47,3 +47,30 @@ int perceptualHash(const Mat& src, const Mat& target) {
 	}
 	return iDiffNum;
 }
+
+void curve(const Mat& src,Mat& dst, CurveType num) {	
+	Mat dstImage;
+	vector<Mat> g_vChannels;
+
+	//∑÷¿ÎÕ®µ¿
+	split(src, g_vChannels);
+	Mat imageBlueChannel = g_vChannels.at(0);
+	Mat imageGreenChannel = g_vChannels.at(1);
+	Mat imageRedChannel = g_vChannels.at(2);
+	switch (num) {
+	case B:dst = imageBlueChannel; break;
+	case R_DIFF_G:dst = imageRedChannel - imageGreenChannel; break;
+	case G:dst = imageGreenChannel; break;
+	case B_DIFF_R:dst = imageBlueChannel - imageRedChannel; break;
+	case R:dst = imageRedChannel; break;
+	case R_DIFF_B:dst = imageRedChannel - imageBlueChannel; break;
+	case G_DIFF_B:dst = imageGreenChannel - imageBlueChannel; break;
+	}
+}
+
+void quickMatchTemplate(InputArray src, const string& patternPath, double* maxVal, double* minVal, TemplateMatchModes method) {
+	Mat matchResult;
+	Mat areaPattern1 = imread(patternPath, IMREAD_GRAYSCALE);
+	matchTemplate(src, areaPattern1, matchResult, method);
+	minMaxLoc(matchResult, minVal, maxVal, 0, 0, Mat());
+}

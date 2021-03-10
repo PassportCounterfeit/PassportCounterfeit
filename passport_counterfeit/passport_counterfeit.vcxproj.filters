@@ -45,6 +45,9 @@
     <ClCompile Include="TUR.cpp">
       <Filter>源文件\country</Filter>
     </ClCompile>
+    <ClCompile Include="ARG.cpp">
+      <Filter>源文件\country</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -69,6 +72,9 @@
       <Filter>头文件\country</Filter>
     </ClInclude>
     <ClInclude Include="TUR.h">
+      <Filter>头文件\country</Filter>
+    </ClInclude>
+    <ClInclude Include="ARG.h">
       <Filter>头文件\country</Filter>
     </ClInclude>
   </ItemGroup>
